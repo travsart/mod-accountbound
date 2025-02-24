@@ -52,11 +52,11 @@ public:
     bool OnGossipHello(Player* /*player*/, Creature* /*creature*/) override;
 
     // PlayerScript
-    void OnAchiComplete(Player* /*player*/, AchievementEntry const* /*achievement*/) override;
-    void OnAfterStoreOrEquipNewItem(Player* /*player*/, uint32 /*vendorslot*/, Item* /*item*/, uint8 /*count*/, uint8 /*bag*/, uint8 /*slot*/, ItemTemplate const* /*pProto*/, Creature* /*pVendor*/, VendorItem const* /*crItem*/, bool /*bStore*/) override;
-    void OnLevelChanged(Player* /*player*/, uint8 /*oldlevel*/) override;
-    void OnLogin(Player* /*player*/) override;
-    void OnSave(Player* /*player*/) override;
+    void OnPlayerAchievementComplete(Player* /*player*/, AchievementEntry const* /*achievement*/) override;
+    void OnPlayerBeforeStoreOrEquipNewItem(Player* /*player*/, uint32 /*vendorslot*/, Item* /*item*/, uint8 /*count*/, uint8 /*bag*/, uint8 /*slot*/, ItemTemplate const* /*pProto*/, Creature* /*pVendor*/, VendorItem const* /*crItem*/, bool /*bStore*/) override;
+    void OnPlayerLevelChanged(Player* /*player*/, uint8 /*oldlevel*/) override;
+    void OnPlayerLogin(Player* /*player*/) override;
+    void OnPlayerSave(Player* /*player*/) override;
 
     // WorldScript
     void OnAfterConfigLoad(bool /*reload*/) override;
